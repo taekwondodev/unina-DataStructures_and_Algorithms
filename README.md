@@ -14,15 +14,15 @@ It will compile and then open the main file with the command
 ```
 
 ## Vector
-[Link to the directory of Vector](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/Galdiero-Davide-N86004093/vector)
+[Link to the directory of Vector](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/Vector_List_Stack_Queue/vector)
 
 ## List
-[Link to the directory of List](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/Galdiero-Davide-N86004093/list)
+[Link to the directory of List](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/Vector_List_Stack_Queue/list)
 
 ## Stack
 Stack has two version. One List version and one Vector version.
-[Link to the directory of Stack](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/Galdiero-Davide-N86004093/stack)
+[Link to the directory of Stack](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/Vector_List_Stack_Queue/stack)
 
 ## Queue
 Queue has two version. One List version and one Vector version.
-[Link to the directory of Queue](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/Galdiero-Davide-N86004093/queue)
+[Link to the directory of Queue](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/Vector_List_Stack_Queue/queue)
