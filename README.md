@@ -1,7 +1,7 @@
 # Data Structures and Algorithms
 I re-implemented the library of this Data Structures on C++ for the 'Laboratorio Di Algoritmi e Strutture Dati' Exam.
-To compile you need to use Linux or WSL because of how the Test are written.
-The tests are written by the Teacher.
+To compile you need to use Linux or WSL because of how the zlasdtest are written, zlasdtests are written by the Teacher.
+The comments are in italian.
 To start the test call the command make in the linux terminal on vscode.
 
 ```bash
