@@ -4,6 +4,8 @@ To compile you need to use Linux or WSL because of how the zlasdtest are written
 The hierarchy of the data structures starts from abstract classes and then I override the methods into the data structures.
 The classes are templates for every use. They are the most possible generycs.
 The comments are in italian.
+
+## Testing
 To start the test call the command make in the linux terminal on vscode.
 
 ```bash
