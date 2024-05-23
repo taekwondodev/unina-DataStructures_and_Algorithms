@@ -1,6 +1,8 @@
 # Data Structures and Algorithms
 I re-implemented the library of this Data Structures on C++ for the 'Laboratorio Di Algoritmi e Strutture Dati' Exam.
-To compile you need to use Linux or WSL because of how the zlasdtest are written, zlasdtests are written by the Teacher.
+To compile you need to use Linux or WSL because of how the zlasdtest are written, zlasdtests are written by the Teacher, zmytest are written by me. 
+The hierarchy of the data structures starts from abstract classes and then I override the methods into the data structures.
+The classes are templates for every use. They are the most possible generycs.
 The comments are in italian.
 To start the test call the command make in the linux terminal on vscode.
 
@@ -26,3 +28,15 @@ Stack has two version. One List version and one Vector version.
 ## Queue
 Queue has two version. One List version and one Vector version.
 [Link to the directory of Queue](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/Vector_List_Stack_Queue/queue)
+
+## BinaryTree
+Bynary tree has two version. One List version and one Vector version.
+
+## Iterator
+I re-implemented also the Iterator for the Binary Trees, for every order.
+
+## Bynary Search Tree
+I choose to implement the BST with the BinaryTreeLnk version.
+
+## HashTable
+HashTable has two version. One is the Closing Address and one is the Open Addressing.
