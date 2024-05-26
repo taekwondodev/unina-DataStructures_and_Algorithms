@@ -45,5 +45,5 @@ I used the BinaryTreeLnk version for implementing the BST.
 [Link to the directory of BST](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/exercise/bst)
 
 ## HashTable
-HashTable has two version. One is the Closing Address and one is the Open Addressing.
+HashTable has two version. One is the Closing Address and the other one is the Open Addressing.
 [Link to the directory of HashTable](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/exercise/hashtable)
