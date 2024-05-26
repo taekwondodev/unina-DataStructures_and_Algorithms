@@ -6,13 +6,15 @@ The classes are templates for every use. They are the most possible generycs.
 The comments are in italian.
 
 ## Testing
-To start the test call the command make in the linux terminal on vscode.
-
+To start the test before calling the command make in the linux terminal on vscode, Move into the directory.
+```bash
+cd exercise
+```
+Now launch the command to start compiling
 ```bash
 make
 ```
-It will compile and then open the main file with the command
-
+After compiling open the main file with the command
 ```bash
 ./main
 ```
