@@ -35,12 +35,15 @@ Queue has two version. One List version and one Vector version.
 
 ## BinaryTree
 Bynary tree has two version. One List version and one Vector version.
+[Link to the directory of BinaryTree](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/exercise/binarytree)
 
 ## Iterator
-I re-implemented also the Iterator for the Binary Trees, for every order.
+I re-implemented also the Iterator for the Binary Trees, for every order. I implemented one general abstract class and then the implementation on the BinaryTree.cpp file
 
 ## Bynary Search Tree
-I choose to implement the BST with the BinaryTreeLnk version.
+I used the BinaryTreeLnk version for implementing the BST.
+[Link to the directory of BST](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/exercise/bst)
 
 ## HashTable
 HashTable has two version. One is the Closing Address and one is the Open Addressing.
+[Link to the directory of HashTable](https://github.com/taekwondodev/DataStructures_and_Algorithms/tree/main/exercise/hashtable)
