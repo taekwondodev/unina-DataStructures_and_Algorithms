@@ -3,7 +3,7 @@ namespace lasd {
 
 /* ************************************************************************** */
 template <typename Data>
-HashTableOpnAdr<Data>::HashNode::HashNode(const HashTableOpnAdr<Data>::HashNode& hn){
+HashTableOpnAdr<Data>::HashNode::HashNode(const HashTableOpnAdr<Data>::HashNode& hn) : HashNode(){
     if (hn.state == Status::Occupied){
         element = hn.element;
         state = hn.state;
@@ -11,7 +11,7 @@ HashTableOpnAdr<Data>::HashNode::HashNode(const HashTableOpnAdr<Data>::HashNode&
 }
 
 template <typename Data>
-HashTableOpnAdr<Data>::HashNode::HashNode(HashTableOpnAdr<Data>::HashNode&& hn) noexcept {
+HashTableOpnAdr<Data>::HashNode::HashNode(HashTableOpnAdr<Data>::HashNode&& hn) noexcept : HashNode() {
     if (hn.state == Status::Occupied){
         std::swap(element, hn.element);
         std::swap(state, hn.state);
