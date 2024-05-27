@@ -35,7 +35,7 @@ protected:
     Data element;
     Status state = Status::Empty;
 
-    HashNode(){};
+    HashNode() = default;
     HashNode(const Data& dat) : element(dat), state(Status::Occupied) {};
     HashNode(Data&& dat) : element(std::move(dat)), state(Status::Occupied) {};
     HashNode(const HashNode&);
