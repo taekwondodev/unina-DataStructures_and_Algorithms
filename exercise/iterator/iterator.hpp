@@ -65,8 +65,7 @@ private:
 
 protected:
 
-  using Iterator<Data>::operator*;
-  using Iterator<Data>::Terminated;
+  // ...
 
 public:
 
@@ -96,6 +95,7 @@ public:
 
   // type operator*() specifiers; // (mutable version; concrete function must throw std::out_of_range when terminated)
   virtual Data& operator*() = 0;
+  using Iterator<Data>::operator*;
 };
 
 /* ************************************************************************** */
@@ -110,8 +110,7 @@ private:
 
 protected:
 
-  using Iterator<Data>::operator*;
-  using Iterator<Data>::Terminated;
+  // ...
 
 public:
 
@@ -140,6 +139,7 @@ public:
 
   // type operator++() specifiers; // (concrete function must throw std::out_of_range when terminated)
   virtual ForwardIterator& operator++() = 0;
+  using Iterator<Data>::operator*;
 };
 
 /* ************************************************************************** */
@@ -154,8 +154,7 @@ private:
 
 protected:
 
-  using Iterator<Data>::operator*;
-  using Iterator<Data>::Terminated;
+  // ...
 
 public:
 
@@ -183,6 +182,7 @@ public:
 
   // type Reset() specifiers; // (concrete function should not throw exceptions)
   virtual void Reset() noexcept = 0; //salva la radice dell'albero in una variabile, svuoto lo stack e ricomincia dalla root
+  using Iterator<Data>::operator*;
 };
 
 /* ************************************************************************** */
