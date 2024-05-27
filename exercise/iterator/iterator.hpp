@@ -65,7 +65,8 @@ private:
 
 protected:
 
-  // ...
+  using Iterator<Data>::operator*;
+  using Iterator<Data>::Terminated;
 
 public:
 
@@ -109,7 +110,8 @@ private:
 
 protected:
 
-  // ...
+  using Iterator<Data>::operator*;
+  using Iterator<Data>::Terminated;
 
 public:
 
@@ -152,7 +154,8 @@ private:
 
 protected:
 
-  // ...
+  using Iterator<Data>::operator*;
+  using Iterator<Data>::Terminated;
 
 public:
 
