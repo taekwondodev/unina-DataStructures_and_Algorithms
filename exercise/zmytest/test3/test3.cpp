@@ -673,7 +673,7 @@ namespace t {
 
                 cout << "Re-insert del contenitore in HashTable" << endl;
                 for (unsigned long i = 0; i < vec.Size(); ++i){
-                    ht.Insert(vec);
+                    ht.Insert(vec[i]);
                 }
                 cout << "Size dovrebbe essere: 20" << endl;
                 cout << "Accesso a size: " << ht.Size() << endl;
@@ -1214,7 +1214,7 @@ namespace t {
 
                 cout << "Re-insert del contenitore in HashTable" << endl;
                 for (unsigned long i = 0; i < vec.Size(); ++i){
-                    ht.Insert(vec);
+                    ht.Insert(vec[i]);
                 }
                 cout << "Size dovrebbe essere: 20" << endl;
                 cout << "Accesso a size: " << ht.Size() << endl;
