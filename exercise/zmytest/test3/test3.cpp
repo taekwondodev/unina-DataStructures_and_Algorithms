@@ -56,6 +56,7 @@ namespace t {
             cout << "3: Test Resize" << endl;
             cout << "4: Test Clear" << endl;
             cout << "5: Test Some" << endl;
+            if (type == 1){cout << "6: Test Size in double Insert" << endl;}
             cout << "0: Tornare indietro" << endl;
 
             cin >> x;
@@ -660,6 +661,23 @@ namespace t {
                 ht1.RemoveSome(vec);
                 ht2.RemoveSome(vec);
             }
+            else if (x == 6){
+                lasd::Vector<int> vec(20);
+                pieno19(vec, 20);
+
+                cout << "Creazione HashTable" << endl;
+                lasd::HashTableClsAdr<int> ht(vec);
+
+                cout << "Size dovrebbe essere: 20" << endl;
+                cout << "Accesso a size: " << ht.Size() << endl;
+
+                cout << "Re-insert del contenitore in HashTable" << endl;
+                for (unsigned long i = 0; i < vec.Size(); ++i){
+                    ht.Insert(vec);
+                }
+                cout << "Size dovrebbe essere: 20" << endl;
+                cout << "Accesso a size: " << ht.Size() << endl;
+            }
         }
     }
     void MenuHashOpn(int type){
@@ -671,6 +689,7 @@ namespace t {
             cout << "3: Test Clear" << endl;
             cout << "4: Test Some" << endl;
             if (type == 1){cout << "5: Test costruttore default" << endl;}
+            if {type == 1}{cout << "6: Test Size su double Insert" << endl;}
             cout << "0: Per tornare indietro" << endl;
 
             cin>> x;
@@ -1182,6 +1201,23 @@ namespace t {
                 if (ht != ht3){
                     cout << "Diversi" << endl;
                 }
+            }
+            else if (x == 6){
+                lasd::Vector<int> vec(20);
+                pieno19(vec, 20);
+
+                cout << "Creazione HashTable" << endl;
+                lasd::HashTableOpnAdr<int> ht(vec);
+
+                cout << "Size dovrebbe essere: 20" << endl;
+                cout << "Accesso a size: " << ht.Size() << endl;
+
+                cout << "Re-insert del contenitore in HashTable" << endl;
+                for (unsigned long i = 0; i < vec.Size(); ++i){
+                    ht.Insert(vec);
+                }
+                cout << "Size dovrebbe essere: 20" << endl;
+                cout << "Accesso a size: " << ht.Size() << endl;
             }
         }
     }
