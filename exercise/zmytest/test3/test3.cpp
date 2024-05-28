@@ -689,7 +689,7 @@ namespace t {
             cout << "3: Test Clear" << endl;
             cout << "4: Test Some" << endl;
             if (type == 1){cout << "5: Test costruttore default" << endl;}
-            if {type == 1}{cout << "6: Test Size su double Insert" << endl;}
+            if (type == 1){cout << "6: Test Size su double Insert" << endl;}
             cout << "0: Per tornare indietro" << endl;
 
             cin>> x;
