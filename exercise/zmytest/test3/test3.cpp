@@ -677,6 +677,17 @@ namespace t {
                 }
                 cout << "Size dovrebbe essere: 20" << endl;
                 cout << "Accesso a size: " << ht.Size() << endl;
+
+                cout << "Rimozione degli elementi di Hashtable" << endl;
+                ht.Clear();
+                cout << "Size dovrebbe essere: 0" << endl;
+                cout << "Accesso a size: " << ht.Size() << endl;
+
+                for (unsigned long i = 0; i < vec.Size(); ++i){
+                    ht.Insert(vec[i]);
+                }
+                cout << "Size dovrebbe essere: 20" << endl;
+                cout << "Accesso a size: " << ht.Size() << endl;
             }
         }
     }
@@ -1213,6 +1224,17 @@ namespace t {
                 cout << "Accesso a size: " << ht.Size() << endl;
 
                 cout << "Re-insert del contenitore in HashTable" << endl;
+                for (unsigned long i = 0; i < vec.Size(); ++i){
+                    ht.Insert(vec[i]);
+                }
+                cout << "Size dovrebbe essere: 20" << endl;
+                cout << "Accesso a size: " << ht.Size() << endl;
+
+                cout << "Rimozione degli elementi di Hashtable" << endl;
+                ht.Clear();
+                cout << "Size dovrebbe essere: 0" << endl;
+                cout << "Accesso a size: " << ht.Size() << endl;
+
                 for (unsigned long i = 0; i < vec.Size(); ++i){
                     ht.Insert(vec[i]);
                 }
