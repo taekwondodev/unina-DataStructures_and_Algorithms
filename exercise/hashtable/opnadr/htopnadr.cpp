@@ -273,7 +273,7 @@ void HashTableOpnAdr<Data>::Remove(const Data& dat, unsigned long i){
         }
 
         if (table[j].state == Status::Occupied && table[j].element == dat){
-            table[j].state == Status::Removed;
+            table[j].state = Status::Removed;
             --this->size;
             return;
         }
