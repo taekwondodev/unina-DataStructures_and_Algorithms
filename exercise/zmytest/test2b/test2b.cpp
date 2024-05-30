@@ -82,7 +82,7 @@ void MenuBST(int n, int type){
         cout << "4: Testa le funzioni di Successor e Predecessor" << endl;
         if (type == 1){ cout << "5: Testa il confronto tra iteratori" << endl; }
         if (type == 1){ cout << "6: Testa la Remove() di un nodo con due figli" << endl; }
-        if (tyoe == 1){ cout << "7: Test" << endl; }
+        if (type == 1){ cout << "7: Test" << endl; }
         cout << "0: Per uscire dal test" << endl;
         cin >> scelta;
         cout << endl;
@@ -507,6 +507,12 @@ void MenuBST(int n, int type){
           });
 
           b.RemoveSuccessor(49);
+
+          b.BreadthTraverse([](const int& dat){
+            cout << dat << " ";
+          });
+
+          b.RemovePredecessor(61);
 
           b.BreadthTraverse([](const int& dat){
             cout << dat << " ";
