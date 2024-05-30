@@ -245,7 +245,7 @@ void HashTableOpnAdr<Data>::Clear() {
 
 template <typename Data>
 unsigned long HashTableOpnAdr<Data>::HashKey(unsigned long key, unsigned long probing) const noexcept {
-    return ((key + probing * (probing / 2)) % tableSize);
+    return (((key + (probing * probing + probing) / 2)) % tableSize);
 }
 
 template <typename Data>
