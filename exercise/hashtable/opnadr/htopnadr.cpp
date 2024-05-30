@@ -286,13 +286,22 @@ void HashTableOpnAdr<Data>::Remove(const Data& dat, unsigned long i){
 }
 
 template <typename Data>
-unsigned long HashTableOpnAdr<Data>::FindEmpty(const Data& dat) const noexcept{
+unsigned long HashTableOpnAdr<Data>::FindEmpty(const Data& dat) noexcept{
     unsigned long i = 0;
 
     do {
         unsigned long j = HashKey(HashKey(dat), i);
-
-        if (table[j].state == Status::Empty || table[j].state == Status::Removed){
+        
+        if (table[j].state == Status::Occupied && table[j].element == dat){
+            return tableSize;
+        }
+        //se è empty non c'è niente dopo
+        else if (table[j].state == Status::Empty) {
+            return j;
+        }
+        //se è removed inserisco ma devo controllare se c'è anche dopo
+        else if (table[j].state == Status::Removed){
+            Remove(dat, i);
             return j;
         }
         else { ++i; }

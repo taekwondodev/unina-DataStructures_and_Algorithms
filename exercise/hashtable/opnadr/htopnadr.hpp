@@ -132,7 +132,7 @@ protected:
   void Remove(const Data&, unsigned long);
   unsigned long HashKey(unsigned long, unsigned long) const noexcept;
   unsigned long Find(const Data&) const noexcept;
-  unsigned long FindEmpty(const Data&) const noexcept;
+  unsigned long FindEmpty(const Data&) noexcept;
   void Expand();
   void Reduce();
 
