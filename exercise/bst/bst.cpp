@@ -160,7 +160,19 @@ template <typename Data>
 void BST<Data>::RemovePredecessor(const Data& dat){
     if (FindPointerToPredecessor(root, dat) != nullptr){
         NodeLnk*& predecessor = *FindPointerToPredecessor(root, dat);
-        delete Detach(predecessor);
+
+        if(predecessor->HasLeftChild() && predecessor->HasRightChild()){
+            NodeLnk*& predecessor2 = *(FindPointerToSuccessor(root, predecessor->Element()));
+            NodeLnk* tmp = predecessor2;
+
+            tmp = Detach(predecessor2);
+            std::swap(tmp->Element(), predecessor->Element());
+
+            delete tmp;
+        }
+        else {
+            delete Detach(predecessor);
+        }
     }
     else {
         throw std::length_error("The node was not found");
@@ -190,7 +202,19 @@ template <typename Data>
 void BST<Data>::RemoveSuccessor(const Data& dat){         //non può avere figlio sinistro
     if (FindPointerToSuccessor(root, dat) != nullptr){
         NodeLnk*& successor = *FindPointerToSuccessor(root, dat);
-        delete Detach(successor);
+
+        if (successor->HasLeftChild() && successor->HasRightChild()){
+            NodeLnk*& successor2 = *(FindPointerToSuccessor(root, successor->Element()));
+            NodeLnk* tmp = successor2;
+
+            tmp = Detach(successor2);
+            std::swap(tmp->Element(), successor->Element());
+
+            delete tmp;
+        }
+        else {
+            delete Detach(successor);
+        }
     }
     else {
         throw std::length_error("The node was not found");
