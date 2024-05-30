@@ -152,15 +152,10 @@ inline bool HashTableOpnAdr<Data>::operator!=(const HashTableOpnAdr<Data>& ht) c
 
 template <typename Data>
 bool HashTableOpnAdr<Data>::Insert(const Data& dat){
-    if (Exists(dat)){
-        return false;
-    }
-
     unsigned long j = FindEmpty(dat);
 
     if (j != tableSize){
         table[j] = HashNode(dat);
-        
         ++this->size;
         Expand();
         return true;
@@ -172,15 +167,10 @@ bool HashTableOpnAdr<Data>::Insert(const Data& dat){
 
 template <typename Data>
 bool HashTableOpnAdr<Data>::Insert(Data&& dat){
-    if (Exists(dat)){
-        return false;
-    }
-
     unsigned long j = FindEmpty(dat);
 
     if (j != tableSize){
         table[j] = HashNode(std::move(dat));
-
         ++this->size;
         Expand();
         return true;
@@ -268,6 +258,31 @@ unsigned long HashTableOpnAdr<Data>::Find(const Data& dat) const noexcept{
     while (i < tableSize);
 
     return tableSize;
+}
+
+template <typename Data>
+void HashTableOpnAdr<Data>::Remove(const Data& dat, unsigned long i){
+    ++i;
+    unsigned long j;
+
+    do{
+        j = HashKey(HashKey(dat), i);
+
+        if (table[j].state == Status::Empty){
+            return;
+        }
+
+        if (table[j].state == Status::Occupied && table[j].element == dat){
+            table[j].state == Status::Removed;
+            --this->size;
+            return;
+        }
+
+        else { ++i; }
+    }
+    while(i < tableSize);
+
+    return;
 }
 
 template <typename Data>
